@@ -8,6 +8,9 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  body{
+    color:var(--background);
+  }
 }
 
 html,
