@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 
-const MapPage = () => {
+const MapPage2 = () => {
   useEffect(() => {
     const loadKakaoMap = async () => {
       const script = document.createElement('script')
@@ -50,9 +50,13 @@ const MapPage = () => {
             const vertexes = route.sections[0].vertexes             // 🔸 핵심 수정
 
             if (vertexes && vertexes.length > 0) {
-              const path = []
+              const path: any[] = []
               for (let i = 0; i < vertexes.length; i += 2) {
-                path.push(new window.kakao.maps.LatLng(vertexes[i + 1], vertexes[i])) // 🔸 [경도, 위도] → [위도, 경도]로 변환
+                const lng = vertexes[i]
+                const lat = vertexes[i + 1]
+                if (typeof lat === 'number' && typeof lng === 'number') {
+                  path.push(new window.kakao.maps.LatLng(lat, lng))
+                }
               }
 
               // ✅ [추가] 폴리라인 생성
@@ -60,7 +64,7 @@ const MapPage = () => {
                 map,
                 path,
                 strokeWeight: 5,
-                strokeColor: '#FF0000',
+                strokeColor: '#ff0000',
                 strokeOpacity: 0.9,
                 strokeStyle: 'solid',
               })
@@ -81,4 +85,4 @@ const MapPage = () => {
   return <div id="map" style={{ width: '100%', height: '100vh' }} />
 }
 
-export default MapPage
+export default MapPage2
