@@ -104,9 +104,9 @@ const Messages = () => {
         </button>
         )} */}
         <div className={styles.tabs}>
-          <button onClick={() => setTab('inbox')}>📥 받은 쪽지</button>
-          <button onClick={() => setTab('sent')}>📤 보낸 쪽지</button>
-          <button onClick={() => setTab('send')}>✉️ 쪽지 쓰기</button>
+          <button onClick={() => setTab('inbox')}>받은 쪽지</button>
+          <button onClick={() => setTab('sent')}>보낸 쪽지</button>
+          <button onClick={() => setTab('send')}>쪽지 쓰기</button>
         </div>
 
         {tab === 'send' && (
