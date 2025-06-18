@@ -29,7 +29,10 @@ const NavBar = () => {
   }
 
   const logout = async () => {
-    await fetch('/api/logout')
+    await fetch('/api/logout', {
+      method: 'POST',
+      credentials: 'include' // 쿠키를 포함하여 요청
+    })
     setUser(null)
     router.push('/')
   }
