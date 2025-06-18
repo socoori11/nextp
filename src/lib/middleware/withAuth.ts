@@ -24,6 +24,7 @@ const withAuth = (handler: (req: NextApiRequest, res: NextApiResponse) => Promis
       return handler(req, res)
     } catch (err) {
       // 토큰이 유효하지 않음
+      console.error(err)
       return res.status(401).json({ error: '잘못된 토큰입니다.' })
     }
   }

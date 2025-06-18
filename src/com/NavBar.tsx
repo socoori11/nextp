@@ -23,6 +23,7 @@ const NavBar = () => {
         setUser(null)
       }
     } catch (err) {
+      console.error(err)
       setUser(null)
     }
   }
