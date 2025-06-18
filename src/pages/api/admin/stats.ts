@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import db from '@/lib/db';
+import { RowDataPacket } from 'mysql2'
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -41,8 +42,15 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
     `);
     const todaylogins = loginRows[0].todaylogins;
 
+    interface VIPUser extends RowDataPacket {
+      userid: string
+      name: string
+      phone: string
+      pointer: number
+    }
+
     // VIP 회원 명단 (Top 3)
-    const [vipRows] = await db.query(`
+    const [vipRows] = await db.query<VIPUser[]>(`
       SELECT userid, name, phone, pointer
       FROM gusers 
       ORDER BY pointer DESC 
