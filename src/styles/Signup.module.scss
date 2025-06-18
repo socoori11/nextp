@@ -1,0 +1,120 @@
+.signup{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0; left:0;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    background-image: url('/img/img4.jpg');
+    background-position:center;
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+
+    .box{
+        
+
+        width: 60%;
+        // background-color: skyblue;
+        margin:  70px auto 20px auto;
+        filter: brightness(1.7);
+        z-index: 20;
+        h2{
+            font-size: 1.7rem;
+            color: #eee;
+            padding: 20px;
+            
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+        .alarmbox{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left:45%;
+            top:40%;
+            transform: translate(-45%, -40%);
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 20px;
+            button{
+                margin: 20px;
+                background-color: red;
+                color: white;
+                border-radius: 3px;
+                padding: 10px;
+            }
+        }
+        .formss{
+            width: 95%;
+            // background-color: skyblue;
+            display: flex;
+            gap: 1.5rem;
+            flex-direction: column;
+            margin: 10px auto;
+            .bb{
+                padding: 5px;
+                font-size: 0.9rem;
+                background-color:#ccc;
+                color: #333;
+                border: none;
+            }
+            button{
+                background-color: #333;
+                color: white;
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+       
+            }
+            .fieldgroup{
+                // background-color: pink;
+                height: 50px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap:2rem;
+
+                label{
+                    font-size: 1.2rem;
+                    padding:5px 20px;
+                    width: 150px;
+                    font-weight: bold;
+                    color: #ccc;
+                    text-align: right;
+                    // border-right: 3px solid #ddd;
+                }
+
+                input,select{
+                    width: 60%;
+                    font-size: 1.2rem;
+                    padding:5px 20px;
+                    border: none;
+                    outline: none; 
+                    border-bottom: 1px dotted #333;
+                    
+                }
+            }
+            p{
+                // margin-top: -20px;
+                font-size: 0.9rem;
+                text-align: right;
+                // margin-right: 30%;
+                color: #333;
+                // font-weight: bold;
+            }
+
+
+        }
+    }
+}
