@@ -15,6 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json(user)
   } catch (err) {
+    console.error(err)
     res.status(401).json({ error: '유효하지 않은 토큰' })
   }
 }
