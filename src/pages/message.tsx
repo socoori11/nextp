@@ -164,7 +164,7 @@ const Messages = () => {
               </strong></p>
               <p><strong>보낸 시간:</strong> {new Date(selectedMsg.sent_at).toLocaleString()}</p>
               <p><strong>내용:</strong></p>
-              <p>{selectedMsg.content}</p>
+              <p className={styles.msgcontent}>{selectedMsg.content}</p>
               {tab === 'inbox' && !selectedMsg.is_read && (
                 <button onClick={() => markAsRead(selectedMsg.id)}>읽음 처리</button>
               )}

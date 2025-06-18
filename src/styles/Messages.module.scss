@@ -1,7 +1,7 @@
 .messageoutbox{
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   top:0; left:0;
   background-image: url('/img/img4.jpg');
   background-position: center;
@@ -19,6 +19,8 @@
     }
     .wrapper {
         max-width: 600px;
+        max-height: 800px;
+        overflow: scroll;
         margin: 3rem auto;
         padding: 2rem;
         background: #fff;
@@ -118,13 +120,15 @@
           p {
             margin: 0.3rem 0;
             word-break: break-word;
+            // background-color: #ccc;
+            color: #333;
           }
       
           strong {
             font-size: 1.1rem;
             color: #333;
           }
-          .magcontent{
+          .msgcontent{
             background-color: #ccc;
             color: #333;
           }
@@ -145,5 +149,16 @@
             }
           }
         }
+      }
+      ::-webkit-scrollbar {
+        display: block;
+      }
+      ::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
+        display: none;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgb(20, 171, 118);
+        min-height: 30px;
+        border-radius: 10px;
       }
 }
