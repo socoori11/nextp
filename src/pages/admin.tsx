@@ -73,7 +73,7 @@ const Admin = () => {
       fetch('/api/info')
       .then(res => res.json())
       .then(data => {
-        console.log('🧾 관리자 info 응답:', data); 
+        console.log('관리자 info 응답:', data); 
         if (data?.role === 'admin') {
            setAdmin1(data);
            setAdmin(data);
@@ -118,7 +118,7 @@ const Admin = () => {
                 <li>오늘 접속자 : {stats.todaylogins} 명</li>
               </ul>
 
-              <h2>👑 VIP 회원 명단</h2>
+              <h2>VIP 회원 명단</h2>
               <ul>
                 {stats.vipList?.map((vip: VipUser, i: number) => (
                   <li key={i}>
@@ -138,7 +138,7 @@ const Admin = () => {
         <div className={styles.rightbox}>
           {admin && (
             <>
-              <h2>🔧 관리자 정보 수정</h2>
+              <h2> 관리자 정보 수정</h2>
               <button className={styles.editbtn} onClick={toggleEdit}>
                 {showEdit ? '숨기기' : '수정하기'}
               </button>
