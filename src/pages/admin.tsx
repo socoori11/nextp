@@ -145,7 +145,7 @@ const Admin = () => {
 
               <div className={`${styles.form} ${showEdit ? styles.open : ''}`}>
     <label>
-      이름:
+      이 &npsp;&npsp;&npsp;&npsp;름:&npsp;&npsp;
       <input
         type="text"
         name="name"
@@ -155,7 +155,7 @@ const Admin = () => {
     </label>
 
     <label>
-      생년월일:
+      생년월일:&npsp;&npsp;
       <input
         type="date"
         name="birth"
@@ -165,7 +165,7 @@ const Admin = () => {
     </label>
 
     <label>
-      성별:
+      성 &npsp;&npsp;&npsp;&npsp;별:&npsp;&npsp;
       <select name="gender" value={admin.gender || ''} onChange={fchange}>
         <option value="M">남자</option>
         <option value="F">여자</option>
@@ -173,7 +173,7 @@ const Admin = () => {
     </label>
 
     <label>
-      주소:
+      주 &npsp;&npsp;&npsp;&npsp;소:&npsp;&npsp;
       <input
         type="text"
         name="address"
@@ -183,7 +183,7 @@ const Admin = () => {
     </label>
 
     <label>
-      연락처:
+      연 락 처:&npsp;&npsp;
       <input
         type="text"
         name="phone"
