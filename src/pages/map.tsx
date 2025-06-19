@@ -97,7 +97,7 @@ const MapPage = () => {
       const destOverlay = new window.kakao.maps.CustomOverlay({
       
         position: destLatLng,
-        content: `<div style="padding:8px 10px; background:gold; border-radius:4px; border:1px solid gray;">도착지: 라인컴퓨터아트학원</div>`,
+        content: `<div style="padding:8px 10px; background:gold; color:#333; border-radius:4px; border:1px solid gray;">도착지: 라인컴퓨터아트학원</div>`,
         yAnchor: 1,
       })
       destOverlay.setMap(map)
