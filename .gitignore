@@ -9,6 +9,12 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.next
+dist
+.env
+.env.local
+out
+.DS_Store
 
 # testing
 /coverage
