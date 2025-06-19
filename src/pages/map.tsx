@@ -90,15 +90,17 @@ const MapPage = () => {
       const destLatLng = new window.kakao.maps.LatLng(destination.y, destination.x)
 
       const destMarker = new window.kakao.maps.Marker({
-        map,
         position: destLatLng,
       })
+      destMarker.setMap(map)
+
       const destOverlay = new window.kakao.maps.CustomOverlay({
-        map,
+      
         position: destLatLng,
         content: `<div style="padding:8px 10px; background:gold; border-radius:4px; border:1px solid gray;">도착지: 라인컴퓨터아트학원</div>`,
         yAnchor: 1,
       })
+      destOverlay.setMap(map)
 
       const bounds = new window.kakao.maps.LatLngBounds()
       bounds.extend(originLatLng)
